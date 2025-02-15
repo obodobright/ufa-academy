@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "debounce-it": "^1.0.0",
+    "framer-motion": "^12.4.3",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sporting-web": "file:../sporting-web"
+    "sporting-web": "file:"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
