@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CustomSectionWrapper } from "../layout";
 import { Logo } from "../logo";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Navbar = () => {
   const navData = [
@@ -14,9 +15,9 @@ export const Navbar = () => {
   return (
     <header className="w-full border-b bg-transparent ">
       <CustomSectionWrapper>
-        <nav className="flex justify-between     items-center">
+        <nav className="flex justify-between  px-4    items-center">
           <Logo />
-          <ul className="flex items-center gap-4">
+          <ul className="hidden md:flex items-center  gap-4">
             {navData.map((navItem, navIndex) => (
               <li
                 key={navIndex}
@@ -26,6 +27,7 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
+          <GiHamburgerMenu fontSize={25} className="flex  md:hidden " />
           {/* <button className="border rounded-md py-1 px-3 ">Register</button> */}
         </nav>
       </CustomSectionWrapper>

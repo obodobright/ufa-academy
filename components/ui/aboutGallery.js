@@ -1,11 +1,12 @@
+import { galleryImg } from "@/utils/data";
 import { GalleryCard } from "../card/galleryCard";
 import { CustomSectionWrapper } from "../layout";
 
 export const AboutGallerySection = () => {
   return (
-    <section className="w-full px-12 py-12 ">
+    <section className="w-full px-5 md:px-12 py-5 md:py-12 ">
       <CustomSectionWrapper>
-        <div className="grid gap-6 grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           <div>
             <div className="mb-4">
               <h1 className="text-3xl font-medium  text-blue uppercase  font-mono  ">We Are </h1>
@@ -43,11 +44,9 @@ export const AboutGallerySection = () => {
             </div>
           </div>
           <div className="w-full h-[60vh] grid grid-cols-2 gap-3 rounded overflow-auto  p-4 bg-gray-100">
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
-            <GalleryCard />
+            {galleryImg.map((gall, index) => (
+              <GalleryCard key={index} gallery={gall} />
+            ))}
           </div>
         </div>
       </CustomSectionWrapper>

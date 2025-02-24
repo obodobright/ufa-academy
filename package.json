@@ -14,7 +14,9 @@
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sporting-web": "file:"
+    "react-icons": "^5.5.0",
+    "sporting-web": "file:",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

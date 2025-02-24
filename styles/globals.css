@@ -24,6 +24,10 @@ body {
   width: 4px;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar-track {
   background: #fff;
 }

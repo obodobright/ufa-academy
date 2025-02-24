@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CoachStaff } from "../card/cardContent";
+import { CustomSectionWrapper } from "../layout";
 
 const coaches = [
   {
@@ -24,20 +25,24 @@ const coaches = [
 
 export default function CoachingStaff() {
   return (
-    <section className="py-12 bg-gray-100">
-      <div className="container mx-auto text-center mb-8">
-        <h2 className="text-4xl font-bold text-blue">Meet Our Coaching Staff</h2>
-        <p className="text-gray-600 mt-2">
-          Expert trainers dedicated to shaping the next generation of football stars.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 container mx-auto px-6">
-        {coaches.map((coach, index) => (
-          <motion.div key={index} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <CoachStaff coach={coach} />
-          </motion.div>
-        ))}
-      </div>
+    <section className="w-full px-5 bg-gray-100">
+      <CustomSectionWrapper>
+        <section className="py-4 md:py-12 ">
+          <div className="container mx-auto text-left mb-8">
+            <h2 className="text-2xl md:text-4xl font-bold text-blue">Meet Our Coaching Staff</h2>
+            <p className="text-gray-600 mt-2">
+              Expert trainers dedicated to shaping the next generation of football stars.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 container mx-auto px-6">
+            {coaches.map((coach, index) => (
+              <motion.div key={index} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <CoachStaff coach={coach} />
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </CustomSectionWrapper>
     </section>
   );
 }

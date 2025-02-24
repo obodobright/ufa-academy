@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-export const Logo = () => {
-  return <Image src="/asset/ufa-logo.jpg" width={70} height={70} alt="logo" />;
+export const Logo = ({ size = 100 }) => {
+  return <Image src="/asset/ufa_logo.jpg" width={size} height={size} alt="logo" />;
 };
 
 // #001C6D
